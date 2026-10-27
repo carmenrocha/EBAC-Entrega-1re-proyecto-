@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Nosotros | Erebus Cosmetics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/main.css" />
+</head>
+<body>
+
+    <!-- ===== BLOQUE: navbar (Bootstrap) ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-erebus sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/erebus-logo.png" alt="Logo Erebus" class="navbar-erebus__logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navErebus" aria-controls="navErebus" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navErebus">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maquillaje.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regalos.html">Regalos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuidado-facial.html">Cuidado Facial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="navbar-erebus__buscador d-flex" role="search">
+                    <input class="form-control" type="search" name="buscar" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button class="btn" type="submit" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </form>
+                <a class="navbar-erebus__carrito" href="#" aria-label="Ver carrito">
+                    <img src="img/shopping-cart.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ===== BLOQUE: banner ===== -->
+        <section class="banner">
+            <h2 class="banner__titulo">Sobre Nosotros</h2>
+            <p class="banner__descripcion">Conoce la historia detrás de Erebus Cosmetics</p>
+        </section>
+
+        <!-- ===== BLOQUE: nosotros =====
+             Secciones de información sobre la empresa -->
+        <section class="nosotros">
+
+            <!-- ELEMENTO: nosotros__seccion — quiénes somos -->
+            <article class="nosotros__seccion">
+                <img class="nosotros__imagen img-fluid" src="img/index1.jpg" alt="Equipo Erebus">
+                <div class="nosotros__contenido">
+                    <h2 class="nosotros__titulo">¿Quiénes somos?</h2>
+                    <p class="nosotros__texto">
+                        Erebus Cosmetics es una empresa colombiana mayorista especializada
+                        en maquillaje y productos de belleza. Nacimos con la misión de
+                        acercar las mejores marcas del país a cada rincón del territorio,
+                        a precios justos y con un servicio que enamora.
+                    </p>
+                </div>
+            </article>
+
+            <!-- ELEMENTO: nosotros__seccion — nuestra misión -->
+            <article class="nosotros__seccion">
+                <div class="nosotros__contenido">
+                    <h2 class="nosotros__titulo">Nuestra Misión</h2>
+                    <p class="nosotros__texto">
+                        Creemos que la belleza no es solo una apariencia, sino una forma
+                        de ser, sentir y actuar con confianza. Por eso trabajamos cada día
+                        para ofrecer productos que potencien lo mejor de cada persona,
+                        con innovación, calidad y amor por lo que hacemos.
+                    </p>
+                </div>
+                <img class="nosotros__imagen img-fluid" src="img/index2.jpg" alt="Misión Erebus">
+            </article>
+
+            <!-- ELEMENTO: nosotros__seccion — nuestros valores -->
+            <article class="nosotros__seccion">
+                <img class="nosotros__imagen img-fluid" src="img/index3.jpg" alt="Valores Erebus">
+                <div class="nosotros__contenido">
+                    <h2 class="nosotros__titulo">Nuestros Valores</h2>
+                    <p class="nosotros__texto">
+                        Confianza, innovación y pasión por la belleza son los pilares que
+                        guían cada decisión en Erebus. Trabajamos con las mejores marcas
+                        del país para garantizarte productos de calidad que realmente
+                        marcan la diferencia en tu rutina diaria.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+   <!-- ===== BLOQUE: frase-inspiracional ===== -->
+    <section class="frase-inspiracional">
+        <p class="frase-inspiracional__texto">Siempre hay un maquillaje perfecto para cada persona</p>
+    </section>
+
+    <!-- ===== BLOQUE: pie-pagina ===== -->
+    <footer class="pie-pagina">
+        <p class="pie-pagina__creditos">&copy; 2026 Erebus Cosmetics — Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

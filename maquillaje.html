@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Productos | Erebus Cosmetics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/main.css" />
+</head>
+<body>
+
+    <!-- ===== BLOQUE: navbar (Bootstrap) ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-erebus sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/erebus-logo.png" alt="Logo Erebus" class="navbar-erebus__logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navErebus" aria-controls="navErebus" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navErebus">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="maquillaje.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regalos.html">Regalos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuidado-facial.html">Cuidado Facial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="navbar-erebus__buscador d-flex" role="search">
+                    <input class="form-control" type="search" name="buscar" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button class="btn" type="submit" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </form>
+                <a class="navbar-erebus__carrito" href="#" aria-label="Ver carrito">
+                    <img src="img/shopping-cart.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="banner">
+            <h2 class="banner__titulo">Productos de Maquillaje</h2>
+            <p class="banner__descripcion">Resaltamos tu belleza con las mejores marcas del país</p>
+        </section>
+
+        <section class="catalogo">
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 1.png" alt="Iluminador Líquido The Sun">
+                <h3 class="catalogo__nombre">Iluminador Líquido The Sun</h3>
+                <p class="catalogo__precio">$14,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="iluminador-liquido-the-sun" data-nombre="Iluminador Líquido The Sun" data-precio="14000" data-imagen="img/producto 1.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 2.png" alt="Pompón Cotton">
+                <h3 class="catalogo__nombre">Pompón Cotton</h3>
+                <p class="catalogo__precio">$14,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="pompon-cotton" data-nombre="Pompón Cotton" data-precio="14000" data-imagen="img/producto 2.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta catalogo__tarjeta--oferta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 3.png" alt="Iluminador Líquido Brilla">
+                <h3 class="catalogo__nombre">Iluminador Líquido Brilla</h3>
+                <p class="catalogo__precio">$9,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="iluminador-liquido-brilla" data-nombre="Iluminador Líquido Brilla" data-precio="9000" data-imagen="img/producto 3.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 4.png" alt="Labial Mate Velvet">
+                <h3 class="catalogo__nombre">Labial Mate Velvet</h3>
+                <p class="catalogo__precio">$16,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="labial-mate-velvet" data-nombre="Labial Mate Velvet" data-precio="16000" data-imagen="img/producto 4.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 5.png" alt="Base Líquida HD">
+                <h3 class="catalogo__nombre">Base Líquida HD</h3>
+                <p class="catalogo__precio">$32,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="base-liquida-hd" data-nombre="Base Líquida HD" data-precio="32000" data-imagen="img/producto 5.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 6.png" alt="Rubor en Polvo Rosé">
+                <h3 class="catalogo__nombre">Rubor en Polvo Rosé</h3>
+                <p class="catalogo__precio">$15,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="rubor-en-polvo-rose" data-nombre="Rubor en Polvo Rosé" data-precio="15000" data-imagen="img/producto 6.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 7.png" alt="Delineador de Ojos Waterproof">
+                <h3 class="catalogo__nombre">Delineador de Ojos Waterproof</h3>
+                <p class="catalogo__precio">$10,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="delineador-de-ojos-waterproof" data-nombre="Delineador de Ojos Waterproof" data-precio="10000" data-imagen="img/producto 7.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta catalogo__tarjeta--oferta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 8.png" alt="Sombra Individual Shimmer">
+                <h3 class="catalogo__nombre">Sombra Individual Shimmer</h3>
+                <p class="catalogo__precio">$8,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="sombra-individual-shimmer" data-nombre="Sombra Individual Shimmer" data-precio="8000" data-imagen="img/producto 8.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 9.png" alt="Máscara de Pestañas Volumen">
+                <h3 class="catalogo__nombre">Máscara de Pestañas Volumen</h3>
+                <p class="catalogo__precio">$18,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="mascara-de-pestanas-volumen" data-nombre="Máscara de Pestañas Volumen" data-precio="18000" data-imagen="img/producto 9.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 10.png" alt="Brocha Kabuki Profesional">
+                <h3 class="catalogo__nombre">Brocha Kabuki Profesional</h3>
+                <p class="catalogo__precio">$22,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="brocha-kabuki-profesional" data-nombre="Brocha Kabuki Profesional" data-precio="22000" data-imagen="img/producto 10.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 11.png" alt="Paleta de Sombras 12 Tonos">
+                <h3 class="catalogo__nombre">Paleta de Sombras 12 Tonos</h3>
+                <p class="catalogo__precio">$45,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="paleta-de-sombras-12-tonos" data-nombre="Paleta de Sombras 12 Tonos" data-precio="45000" data-imagen="img/producto 11.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 12.png" alt="Corrector Líquido Full Coverage">
+                <h3 class="catalogo__nombre">Corrector Líquido Full Coverage</h3>
+                <p class="catalogo__precio">$17,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="corrector-liquido-full-coverage" data-nombre="Corrector Líquido Full Coverage" data-precio="17000" data-imagen="img/producto 12.png">Agregar al carrito</button>
+            </article>
+
+    
+            <article class="catalogo__tarjeta catalogo__tarjeta--oferta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 13.png" alt="Polvo Compacto Matificante">
+                <h3 class="catalogo__nombre">Polvo Compacto Matificante</h3>
+                <p class="catalogo__precio">$19,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="polvo-compacto-matificante" data-nombre="Polvo Compacto Matificante" data-precio="19000" data-imagen="img/producto 13.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 14.png" alt="Labial Líquido Larga Duración">
+                <h3 class="catalogo__nombre">Labial Líquido Larga Duración</h3>
+                <p class="catalogo__precio">$14,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="labial-liquido-larga-duracion" data-nombre="Labial Líquido Larga Duración" data-precio="14000" data-imagen="img/producto 14.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 15.png" alt="Primer Facial Alisador">
+                <h3 class="catalogo__nombre">Primer Facial Alisador</h3>
+                <p class="catalogo__precio">$24,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="primer-facial-alisador" data-nombre="Primer Facial Alisador" data-precio="24000" data-imagen="img/producto 15.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 16.png" alt="Gloss Labial Brillante">
+                <h3 class="catalogo__nombre">Gloss Labial Brillante</h3>
+                <p class="catalogo__precio">$9,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="gloss-labial-brillante" data-nombre="Gloss Labial Brillante" data-precio="9000" data-imagen="img/producto 16.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 17.png" alt="Delineador de Cejas Waterproof">
+                <h3 class="catalogo__nombre">Delineador de Cejas Waterproof</h3>
+                <p class="catalogo__precio">$11,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="delineador-de-cejas-waterproof" data-nombre="Delineador de Cejas Waterproof" data-precio="11000" data-imagen="img/producto 17.png">Agregar al carrito</button>
+            </article>
+
+                <article class="catalogo__tarjeta catalogo__tarjeta--oferta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 18.png" alt="Fijador de Maquillaje Spray">
+                <h3 class="catalogo__nombre">Fijador de Maquillaje Spray</h3>
+                <p class="catalogo__precio">$20,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="fijador-de-maquillaje-spray" data-nombre="Fijador de Maquillaje Spray" data-precio="20000" data-imagen="img/producto 18.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 19.png" alt="Set de Brochas x5">
+                <h3 class="catalogo__nombre">Set de Brochas x5</h3>
+                <p class="catalogo__precio">$38,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="set-de-brochas-x5" data-nombre="Set de Brochas x5" data-precio="38000" data-imagen="img/producto 19.png">Agregar al carrito</button>
+            </article>
+
+            <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 20.png" alt="Bruma Iluminadora Corporal">
+                <h3 class="catalogo__nombre">Bruma Iluminadora Corporal</h3>
+                <p class="catalogo__precio">$16,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="bruma-iluminadora-corporal" data-nombre="Bruma Iluminadora Corporal" data-precio="16000" data-imagen="img/producto 20.png">Agregar al carrito</button>
+            </article>
+
+              <article class="catalogo__tarjeta">
+                <img class="catalogo__imagen img-fluid" src="img/producto 21.png" alt="Bruma Iluminadora Corporal">
+                <h3 class="catalogo__nombre">Bruma Iluminadora Corporal</h3>
+                <p class="catalogo__precio">$16,000 COP</p>
+                <button type="button" class="catalogo__agregar js-agregar" data-id="bruma-iluminadora-corporal" data-nombre="Bruma Iluminadora Corporal" data-precio="16000" data-imagen="img/producto 21.png">Agregar al carrito</button>
+            </article>
+
+
+        </section>
+    </main>
+
+
+    <section class="frase-inspiracional">
+        <p class="frase-inspiracional__texto">Siempre hay un maquillaje perfecto para cada persona</p>
+    </section>
+
+   
+    <footer class="pie-pagina">
+        <p class="pie-pagina__creditos">&copy; 2026 Erebus Cosmetics — Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

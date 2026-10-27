@@ -1,0 +1,319 @@
+@use "variables" as v;
+@use "functions" as f;
+@use "mixins" as m;
+
+.destacados__item {
+  @include m.card;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-5;
+  align-items: center;
+  padding: v.$space-5;
+
+  @include m.respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+    padding: v.$space-6;
+  }
+}
+
+.destacados__imagen {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: v.$radius-sm;
+
+  @include m.respond-to(md) {
+    height: 260px;
+  }
+}
+
+.destacados__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-4;
+}
+
+.destacados__titulo {
+  font-size: f.rem(24px);
+  color: v.$color-primary;
+
+  @include m.respond-to(md) {
+    font-size: f.rem(28px);
+  }
+}
+
+.destacados__texto {
+  font-size: f.rem(16px);
+  line-height: 1.7;
+  color: v.$color-text;
+}
+
+.destacados__boton {
+  @include m.button-solid;
+}
+
+.novedades__titulo {
+  font-size: f.rem(26px);
+  color: v.$color-primary;
+  text-align: center;
+  margin-bottom: v.$space-2;
+
+  @include m.respond-to(md) {
+    font-size: f.rem(30px);
+  }
+}
+
+.novedades__subtitulo {
+  font-size: f.rem(16px);
+  color: v.$color-text-muted;
+  text-align: center;
+  margin-bottom: v.$space-6;
+}
+
+.novedades__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-4;
+
+  @include m.respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: v.$space-5;
+  }
+
+  @include m.respond-to(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.novedades__tarjeta {
+  @include m.card;
+  @include m.card-hover;
+  padding: v.$space-5 v.$space-4;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-2;
+}
+
+.novedades__tarjeta--oferta {
+  position: relative;
+  border: 1px solid v.$color-accent;
+
+  &::before {
+    content: "Oferta";
+    position: absolute;
+    top: v.$space-2;
+    right: v.$space-2;
+    background-color: v.$color-accent;
+    color: f.contrast-text(v.$color-accent);
+    font-family: v.$font-body;
+    font-size: f.rem(10px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: v.$space-1 v.$space-2;
+    border-radius: v.$radius-pill;
+  }
+
+  .novedades__precio {
+    color: v.$color-primary;
+    font-weight: 700;
+  }
+}
+
+.novedades__imagen {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: v.$radius-sm;
+  margin-bottom: v.$space-1;
+}
+
+.novedades__nombre {
+  font-size: f.rem(16px);
+  font-weight: 500;
+  color: v.$color-text;
+  margin: 0;
+}
+
+.novedades__precio {
+  font-family: v.$font-body;
+  font-size: f.rem(14px);
+  font-weight: 400;
+  color: v.$color-text-muted;
+  margin: 0;
+}
+
+.novedades__boton {
+  @include m.button-solid;
+  margin-top: v.$space-1;
+  padding: v.$space-2 v.$space-4;
+  font-size: f.rem(12px);
+}
+
+.catalogo__tarjeta {
+  @include m.card;
+  @include m.card-hover;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  padding: v.$space-4;
+  overflow: hidden;
+}
+
+.catalogo__tarjeta--oferta {
+  border: 1px solid v.$color-accent;
+
+  &::before {
+    content: "Oferta";
+    position: absolute;
+    top: v.$space-2;
+    right: v.$space-2;
+    background-color: v.$color-accent;
+    color: f.contrast-text(v.$color-accent);
+    font-family: v.$font-body;
+    font-size: f.rem(10px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: v.$space-1 v.$space-2;
+    border-radius: v.$radius-pill;
+  }
+
+  .catalogo__precio {
+    color: v.$color-primary;
+    font-weight: 700;
+  }
+}
+
+.catalogo__imagen {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: v.$radius-sm;
+  margin-bottom: v.$space-4;
+}
+
+.catalogo__nombre {
+  font-weight: 500;
+  font-size: f.rem(17px);
+  margin-bottom: v.$space-1;
+}
+
+.catalogo__precio {
+  font-weight: 400;
+  font-size: f.rem(15px);
+  color: v.$color-text-muted;
+}
+
+.nosotros__seccion {
+  @include m.card;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-5;
+  align-items: center;
+  padding: v.$space-5;
+
+  @include m.respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+    padding: v.$space-6;
+  }
+}
+
+.nosotros__imagen {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: v.$radius-sm;
+
+  @include m.respond-to(md) {
+    height: 240px;
+  }
+}
+
+.nosotros__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-4;
+}
+
+.nosotros__titulo {
+  font-size: f.rem(24px);
+  color: v.$color-primary;
+
+  @include m.respond-to(md) {
+    font-size: f.rem(28px);
+  }
+}
+
+.nosotros__texto {
+  font-size: f.rem(16px);
+  line-height: 1.7;
+  color: v.$color-text;
+}
+
+
+.formulario-contacto {
+  @include m.card;
+  width: 100%;
+  max-width: 600px;
+  margin: v.$space-7 auto;
+  padding: v.$space-6 v.$space-5;
+
+  @include m.respond-down(md) {
+    max-width: 100%;
+    border-radius: 0;
+    margin-block: v.$space-5;
+    box-shadow: none;
+    border-top: 2px solid v.$color-primary-light;
+  }
+}
+
+.formulario-contacto__titulo {
+  font-size: f.rem(26px);
+  color: v.$color-primary;
+  text-align: center;
+  margin-bottom: v.$space-6;
+}
+
+.formulario-contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-4;
+}
+
+.formulario-contacto__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-1;
+}
+
+.formulario-contacto__etiqueta {
+  font-family: v.$font-body;
+  font-size: f.rem(13px);
+  font-weight: 600;
+  color: v.$color-text;
+}
+
+.formulario-contacto__campo {
+  @include m.form-field;
+}
+
+.formulario-contacto__campo--textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formulario-contacto__enviar {
+  @include m.button-solid;
+  align-self: flex-start;
+  padding: v.$space-3 v.$space-6;
+
+  @include m.respond-down(sm) {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
+}

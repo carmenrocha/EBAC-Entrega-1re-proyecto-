@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Erebus Cosmetics | Mayorista de Maquillaje</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/main.css" />
+</head>
+<body>
+
+    <!-- ===== BLOQUE: navbar (Bootstrap) ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-erebus sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/erebus-logo.png" alt="Logo Erebus" class="navbar-erebus__logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navErebus" aria-controls="navErebus" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navErebus">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maquillaje.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regalos.html">Regalos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuidado-facial.html">Cuidado Facial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="navbar-erebus__buscador d-flex" role="search">
+                    <input class="form-control" type="search" name="buscar" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button class="btn" type="submit" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </form>
+                <a class="navbar-erebus__carrito" href="#" aria-label="Ver carrito">
+                    <img src="img/shopping-cart.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ===== BLOQUE: carousel (hero, Bootstrap Carousel) ===== -->
+        <div id="carouselErebus" class="carousel slide carousel-fade carousel-erebus" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselErebus" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselErebus" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselErebus" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/index1.jpg" class="d-block w-100 img-fluid" alt="Innovación Erebus">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Bienvenida a Erebus Cosmetics</h2>
+                        <p>Tu aliado mayorista en maquillaje y belleza</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/index2.jpg" class="d-block w-100 img-fluid" alt="Maquillaje Erebus">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Maquillaje que resalta tu esencia</h2>
+                        <p>Las mejores marcas del país, al mejor precio mayorista</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/index3.jpg" class="d-block w-100 img-fluid" alt="Regalos Erebus">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Regalos para enamorar</h2>
+                        <p>Combos perfectos para cada ocasión especial</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselErebus" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselErebus" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <!-- ===== BLOQUE: destacados =====
+             3 secciones en grid 2 columnas: imagen + texto -->
+        <section class="destacados">
+
+            <!-- ELEMENTO: destacados__item — Innovación -->
+            <article class="destacados__item">
+                <img class="destacados__imagen img-fluid" src="img/index1.jpg" alt="Innovación Erebus">
+                <div class="destacados__contenido">
+                    <h2 class="destacados__titulo">Innovación que realza tu belleza</h2>
+                    <p class="destacados__texto">
+                        En Erebus Makeup creemos que la belleza no es solo una apariencia,
+                        sino una forma de ser, sentir y actuar con confianza.
+                    </p>
+                    <a class="destacados__boton" href="nosotros.html">Conócenos</a>
+                </div>
+            </article>
+
+            <!-- ELEMENTO: destacados__item — Maquillaje -->
+            <article class="destacados__item">
+                <div class="destacados__contenido">
+                    <h2 class="destacados__titulo">Maquillaje en Erebus</h2>
+                    <p class="destacados__texto">
+                        Resaltamos tu belleza. Descubre nuestra línea de rubores, sombras,
+                        iluminadores y más con las mejores marcas del país.
+                        Con Erebus, brillar es más fácil que nunca.
+                    </p>
+                    <a class="destacados__boton" href="maquillaje.html">Ver productos</a>
+                </div>
+                <img class="destacados__imagen img-fluid" src="img/index2.jpg" alt="Maquillaje Erebus">
+            </article>
+
+            <!-- ELEMENTO: destacados__item — Regalos -->
+            <article class="destacados__item">
+                <img class="destacados__imagen img-fluid" src="img/index3.jpg" alt="Regalos Erebus">
+                <div class="destacados__contenido">
+                    <h2 class="destacados__titulo">Regalos para enamorar</h2>
+                    <p class="destacados__texto">
+                        Regalos especiales en Erebus. Combos perfectos para cumpleaños,
+                        día de la madre y más. ¡Sorprende con un detalle inolvidable!
+                    </p>
+                    <a class="destacados__boton" href="regalos.html">Ver regalos</a>
+                </div>
+            </article>
+
+            <!-- ELEMENTO: destacados__item — Cuidado Facial -->
+            <article class="destacados__item">
+                <div class="destacados__contenido">
+                    <h2 class="destacados__titulo">Cuidado Facial</h2>
+                    <p class="destacados__texto">
+                        Cuida tu piel con Erebus. Cremas de aguacate, ácido hialurónico y más
+                        para hidratar y proteger tu rostro. No olvides nuestra mascarilla
+                        hidratante para labios y ojeras para un cuidado completo.
+                    </p>
+                    <a class="destacados__boton" href="cuidado-facial.html">Ver cuidado facial</a>
+                </div>
+                <img class="destacados__imagen img-fluid" src="img/index4.png" alt="Cuidado Facial Erebus">
+            </article>
+
+        </section>
+
+        <!-- ===== BLOQUE: novedades ===== -->
+        <section class="novedades">
+            <h2 class="novedades__titulo">Nuestro contenido más reciente</h2>
+            <p class="novedades__subtitulo">Conoce las novedades que tenemos para ti</p>
+
+            <div class="novedades__grid">
+
+                <!-- ELEMENTO: novedades__tarjeta -->
+                <article class="novedades__tarjeta">
+                    <img class="novedades__imagen img-fluid" src="img/producto 1.png" alt="Iluminador The Sun">
+                    <h3 class="novedades__nombre">Iluminador Líquido The Sun</h3>
+                    <p class="novedades__precio">$14,000 COP</p>
+                <button type="button" class="novedades__agregar js-agregar" data-id="iluminador-liquido-the-sun" data-nombre="Iluminador Líquido The Sun" data-precio="14000" data-imagen="img/producto 1.png">Agregar al carrito</button>
+                    <a class="novedades__boton" href="maquillaje.html">Ver más</a>
+                </article>
+
+                <article class="novedades__tarjeta">
+                    <img class="novedades__imagen img-fluid" src="img/producto 2.png" alt="Pompón Cotton">
+                    <h3 class="novedades__nombre">Pompón Cotton</h3>
+                    <p class="novedades__precio">$14,000 COP</p>
+                <button type="button" class="novedades__agregar js-agregar" data-id="pompon-cotton" data-nombre="Pompón Cotton" data-precio="14000" data-imagen="img/producto 2.png">Agregar al carrito</button>
+                    <a class="novedades__boton" href="maquillaje.html">Ver más</a>
+                </article>
+
+                <!-- MODIFICADOR: novedades__tarjeta--oferta — precio especial -->
+                <article class="novedades__tarjeta novedades__tarjeta--oferta">
+                    <img class="novedades__imagen img-fluid" src="img/producto 3.png" alt="Iluminador Brilla">
+                    <h3 class="novedades__nombre">Iluminador Líquido Brilla</h3>
+                    <p class="novedades__precio">$9,000 COP</p>
+                <button type="button" class="novedades__agregar js-agregar" data-id="iluminador-liquido-brilla" data-nombre="Iluminador Líquido Brilla" data-precio="9000" data-imagen="img/producto 3.png">Agregar al carrito</button>
+                    <a class="novedades__boton" href="maquillaje.html">Ver más</a>
+                </article>
+
+                <article class="novedades__tarjeta">
+                    <img class="novedades__imagen img-fluid" src="img/producto 1.png" alt="Iluminador The Sun">
+                    <h3 class="novedades__nombre">Iluminador Líquido The Sun</h3>
+                    <p class="novedades__precio">$14,000 COP</p>
+                <button type="button" class="novedades__agregar js-agregar" data-id="iluminador-liquido-the-sun" data-nombre="Iluminador Líquido The Sun" data-precio="14000" data-imagen="img/producto 1.png">Agregar al carrito</button>
+                    <a class="novedades__boton" href="maquillaje.html">Ver más</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== BLOQUE: frase-inspiracional ===== -->
+    <section class="frase-inspiracional">
+        <p class="frase-inspiracional__texto">Siempre hay un maquillaje perfecto para cada persona</p>
+    </section>
+
+    <!-- ===== BLOQUE: pie-pagina ===== -->
+    <footer class="pie-pagina">
+        <p class="pie-pagina__creditos">&copy; 2026 Erebus Cosmetics — Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

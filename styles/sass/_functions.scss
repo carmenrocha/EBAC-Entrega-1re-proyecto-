@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "sass:color";
+@use "variables" as v;
+
+/// @param {Number} $px - valor en píxeles (con o sin unidad)
+/// @return {Number} valor en rem
+@function rem($px) {
+  @if math.is-unitless($px) {
+    $px: $px * 1px;
+  }
+  @return math.div($px, v.$fs-base) * 1rem;
+}
+
+@function _linearize-channel($v) {
+  @if $v <= 0.03928 {
+    @return math.div($v, 12.92);
+  }
+  @return math.pow(math.div($v + 0.055, 1.055), 2.4);
+}
+
+/// @param {Color} $c
+@function relative-luminance($c) {
+  $r: _linearize-channel(math.div(color.channel($c, "red"), 255));
+  $g: _linearize-channel(math.div(color.channel($c, "green"), 255));
+  $b: _linearize-channel(math.div(color.channel($c, "blue"), 255));
+
+  @return 0.2126 * $r + 0.7152 * $g + 0.0722 * $b;
+}
+
+/// @param {Color} $a
+/// @param {Color} $b
+@function contrast-ratio($a, $b) {
+  $l1: relative-luminance($a) + 0.05;
+  $l2: relative-luminance($b) + 0.05;
+  @return math.div(math.max($l1, $l2), math.min($l1, $l2));
+}
+
+/// @param {Color} $bg
+/// @return {Color}
+@function contrast-text($bg) {
+  $ratio-dark: contrast-ratio($bg, v.$color-text);
+  $ratio-light: contrast-ratio($bg, v.$color-text-inverse);
+
+  @if $ratio-dark >= $ratio-light {
+    @return v.$color-text;
+  } @else {
+    @return v.$color-text-inverse;
+  }
+}
+
+/// @param {Color} $color
+/// @param {Number} $amount - porcentaje a aclarar
+@function tint($color, $amount) {
+  @return color.mix(white, $color, $amount);
+}
+
+/// @param {Color} $color
+/// @param {Number} $amount - porcentaje a oscurecer
+@function shade($color, $amount) {
+  @return color.mix(black, $color, $amount);
+}

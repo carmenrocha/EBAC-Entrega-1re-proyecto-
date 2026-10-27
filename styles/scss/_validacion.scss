@@ -1,0 +1,52 @@
+@use "variables" as v;
+@use "functions" as f;
+
+
+.formulario-contacto__campo--invalido,
+.formulario-contacto__campo--invalido:hover,
+.formulario-contacto__campo--invalido:focus-visible {
+  border-color: v.$color-danger;
+  box-shadow: 0 0 0 4px rgba(v.$color-danger, 0.15);
+}
+
+.formulario-contacto__campo--valido,
+.formulario-contacto__campo--valido:hover,
+.formulario-contacto__campo--valido:focus-visible {
+  border-color: v.$color-success;
+}
+
+.formulario-contacto__error {
+  margin-top: v.$space-1;
+  font-family: v.$font-body;
+  font-size: f.rem(13px);
+  color: v.$color-danger;
+}
+
+.formulario-contacto__contador {
+  font-family: v.$font-body;
+  font-size: f.rem(12px);
+  text-align: right;
+  color: v.$color-text-muted;
+}
+
+.formulario-contacto__contador--limite {
+  font-weight: 600;
+  color: v.$color-danger;
+}
+
+.formulario-contacto__estado {
+  padding: v.$space-3 v.$space-4;
+  border-radius: v.$radius-sm;
+  font-family: v.$font-body;
+  font-size: f.rem(14px);
+}
+
+.formulario-contacto__estado--exito {
+  background-color: rgba(v.$color-success, 0.1);
+  color: v.$color-success;
+}
+
+.formulario-contacto__estado--error {
+  background-color: rgba(v.$color-danger, 0.1);
+  color: v.$color-danger;
+}

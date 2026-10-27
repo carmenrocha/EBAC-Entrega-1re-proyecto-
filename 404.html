@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | Erebus Cosmetics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos dentro de la página: Firebase sirve este archivo en cualquier ruta,
+         por eso no se depende de rutas relativas al CSS. -->
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: "Cormorant", Georgia, "Times New Roman", serif;
+            color: #241318;
+            background-color: #faf5f3;
+        }
+
+        .cabecera {
+            padding: 0.75rem 1rem;
+            background-color: #ba2849;
+            box-shadow: 0 2px 8px rgba(61, 15, 29, 0.08);
+        }
+        .cabecera__logo { display: block; height: 72px; width: auto; margin-inline: auto; }
+
+        .error {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .error__tarjeta {
+            width: 100%;
+            max-width: 480px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #e7c9d0;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(61, 15, 29, 0.14);
+        }
+
+        .error__codigo {
+            font-size: 5rem;
+            font-weight: 600;
+            line-height: 1;
+            color: #ba2849;
+        }
+
+        .error__linea {
+            width: 56px;
+            height: 3px;
+            margin: 1rem auto;
+            border: 0;
+            border-radius: 999px;
+            background-color: #b98a3e;
+        }
+
+        .error__titulo { font-size: 1.75rem; font-weight: 600; color: #241318; margin-bottom: 0.75rem; }
+
+        .error__texto {
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: #6b4b55;
+            margin-bottom: 1.75rem;
+        }
+
+        .error__boton {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #ba2849;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            transition: all 0.25s ease;
+        }
+        .error__boton:hover { background-color: #6e1329; transform: translateY(-2px); box-shadow: 0 2px 8px rgba(61, 15, 29, 0.08); }
+        .error__boton:focus-visible { outline: 3px solid #b98a3e; outline-offset: 2px; }
+
+        .frase {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            background-color: #f3e6e9;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .pie {
+            padding: 1.25rem 1rem;
+            text-align: center;
+            background-color: #ba2849;
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecera">
+        <a href="/index.html"><img class="cabecera__logo" src="/img/erebus-logo.png" alt="Erebus Cosmetics"></a>
+    </header>
+
+    <main class="error">
+        <section class="error__tarjeta">
+            <p class="error__codigo">404</p>
+            <hr class="error__linea">
+            <h1 class="error__titulo">Esta página no existe</h1>
+            <p class="error__texto">
+                Parece que el enlace que buscas se perdió o ya no está disponible.
+                Revisa la dirección o vuelve al inicio para seguir descubriendo nuestros productos.
+            </p>
+            <a class="error__boton" href="/index.html">Volver al inicio</a>
+        </section>
+    </main>
+
+    <p class="frase">Siempre hay un maquillaje perfecto para cada persona</p>
+
+    <footer class="pie">&copy; 2026 Erebus Cosmetics — Todos los derechos reservados</footer>
+
+</body>
+</html>

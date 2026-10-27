@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Contacto | Erebus Cosmetics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/main.css" />
+</head>
+<body>
+
+    <!-- ===== BLOQUE: navbar (Bootstrap) ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-erebus sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/erebus-logo.png" alt="Logo Erebus" class="navbar-erebus__logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navErebus" aria-controls="navErebus" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navErebus">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maquillaje.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regalos.html">Regalos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuidado-facial.html">Cuidado Facial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="navbar-erebus__buscador d-flex" role="search">
+                    <input class="form-control" type="search" name="buscar" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button class="btn" type="submit" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </form>
+                <a class="navbar-erebus__carrito" href="#" aria-label="Ver carrito">
+                    <img src="img/shopping-cart.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ===== BLOQUE: banner ===== -->
+        <section class="banner">
+            <h2 class="banner__titulo">Contáctanos</h2>
+            <p class="banner__descripcion">Estamos aquí para ayudarte</p>
+        </section>
+
+        <!-- ===== BLOQUE: formulario-contacto =====
+             Formulario principal de contacto -->
+        <section class="formulario-contacto">
+
+            <h2 class="formulario-contacto__titulo">Envíanos un mensaje</h2>
+
+            <form class="formulario-contacto__form">
+
+                <!-- ELEMENTO: formulario-contacto__grupo — campo nombre -->
+                <div class="formulario-contacto__grupo">
+                    <label class="formulario-contacto__etiqueta" for="nombre">Nombre completo</label>
+                    <input
+                        class="formulario-contacto__campo"
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                </div>
+
+                <!-- ELEMENTO: formulario-contacto__grupo — campo email -->
+                <div class="formulario-contacto__grupo">
+                    <label class="formulario-contacto__etiqueta" for="email">Correo electrónico</label>
+                    <input
+                        class="formulario-contacto__campo"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tu@correo.com"
+                        required
+                    >
+                </div>
+
+                <!-- ELEMENTO: formulario-contacto__grupo — campo teléfono -->
+                <div class="formulario-contacto__grupo">
+                    <label class="formulario-contacto__etiqueta" for="telefono">Teléfono</label>
+                    <input
+                        class="formulario-contacto__campo"
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="300 000 0000"
+                    >
+                </div>
+
+                <!-- ELEMENTO: formulario-contacto__grupo — campo asunto -->
+                <div class="formulario-contacto__grupo">
+                    <label class="formulario-contacto__etiqueta" for="asunto">Asunto</label>
+                    <select class="formulario-contacto__campo" id="asunto" name="asunto">
+                        <option value="">Selecciona un asunto</option>
+                        <option value="pedido">Pedido mayorista</option>
+                        <option value="productos">Información de productos</option>
+                        <option value="regalos">Combos y regalos</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- ELEMENTO: formulario-contacto__grupo — campo mensaje -->
+                <div class="formulario-contacto__grupo">
+                    <label class="formulario-contacto__etiqueta" for="mensaje">Mensaje</label>
+                    <textarea
+                        class="formulario-contacto__campo formulario-contacto__campo--textarea"
+                        id="mensaje"
+                        name="mensaje"
+                        rows="5"
+                        placeholder="Escribe tu mensaje aquí..."
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- ELEMENTO: formulario-contacto__enviar — botón de envío -->
+                <input
+                    class="formulario-contacto__enviar"
+                    type="submit"
+                    value="Enviar mensaje"
+                >
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ===== BLOQUE: frase-inspiracional ===== -->
+    <section class="frase-inspiracional">
+        <p class="frase-inspiracional__texto">Siempre hay un maquillaje perfecto para cada persona</p>
+    </section>
+
+    <!-- ===== BLOQUE: pie-pagina ===== -->
+    <footer class="pie-pagina">
+        <p class="pie-pagina__creditos">&copy; 2026 Erebus Cosmetics — Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/formulario.js"></script>
+
+</body>
+</html>

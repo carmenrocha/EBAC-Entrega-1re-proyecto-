@@ -1,0 +1,69 @@
+// ---------- Color: marca ----------
+
+$color-primary:        #ba2849; // antes #BA2849 — más oscuro, AA sobre blanco
+$color-primary-dark:   #6e1329; // antes #8c1c34 — hover / activo
+$color-primary-light:  #e8aebd; // antes #f0b8c4 — bordes, detalles suaves
+$color-primary-soft:   #f6e2e7; // fondo suave de tarjetas/hover, reemplaza el rosa saturado
+
+// ---------- Color: acento ----------
+$color-accent:         #b98a3e; // dorado cálido — detalles premium (ofertas, iconos)
+$color-accent-dark:    #8f6a2c;
+
+// ---------- Color: neutros ----------
+$color-bg:             #faf5f3; // fondo general — cálido, poco saturado (antes #f7dde4)
+$color-bg-alt:         #f3e6e9; // franjas alternas / frase inspiracional
+$color-surface:        #ffffff; // tarjetas, formularios
+$color-text:           #241318; // texto principal — casi negro cálido, alto contraste
+$color-text-muted:     #6b4b55; // texto secundario
+$color-text-inverse:   #ffffff; // texto sobre fondos oscuros
+$color-border:         #e7c9d0; // bordes suaves generales
+
+// ---------- Estado ----------
+$color-success: #2e7d4f;
+$color-danger:  #b3261e;
+
+// ---------- Tipografía ----------
+$font-heading: "Cormorant", Georgia, "Times New Roman", serif;
+$font-body:    "Montserrat", Arial, Helvetica, sans-serif;
+
+$fs-base: 16px; // base de referencia para rem()
+
+// ---------- Espaciado (escala 4px) ----------
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.5rem;
+$space-6: 2rem;
+$space-7: 3rem;
+$space-8: 4rem;
+
+// ---------- Radios ----------
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-pill: 999px;
+
+// ---------- Sombras ----------
+$shadow-sm: 0 2px 8px rgba(#3d0f1d, 0.08);
+$shadow-md: 0 6px 20px rgba(#3d0f1d, 0.14);
+$shadow-lg: 0 12px 32px rgba(#3d0f1d, 0.18);
+
+// ---------- Transiciones ----------
+$transition-base: all 0.25s ease;
+$transition-fast: all 0.15s ease;
+
+// ---------- Contenedor ----------
+$container-max: 1280px;
+
+// ---------- Breakpoints (mobile-first, estilo Bootstrap) ----------
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// ---------- Z-index ----------
+$z-header: 100;
+$z-cart: 90;
