@@ -137,6 +137,6 @@
 
     const [primerNombre] = formulario.elements.nombre.value.trim().split(' ');
     limpiarFormulario();
-    mostrarEstado('exito', `¡Gracias, ${primerNombre}! Recibimos tu mensaje y te responderemos pronto.`);
+    mostrarEstado('exito', `¡Gracias, ${primerNombre}! Tu mensaje se validó correctamente. Este formulario es una demostración y aún no envía los datos.`);
   });
 })();
